@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data & secrets — keep sensitive legal docs and keys out of git
+data/
+.env
+
+# OS / editor
+.DS_Store

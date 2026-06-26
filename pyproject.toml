@@ -1,0 +1,21 @@
+[project]
+name = "legendary-potato"
+version = "0.1.0"
+description = "Hybrid search experiment for legal docs"
+requires-python = ">=3.12"
+# Local-first hybrid search: vector (HuggingFace embeddings) + BM25 keyword, fused.
+# Starting point — adjust as the experiment evolves.
+dependencies = [
+    "llama-index-core",
+    "llama-index-retrievers-bm25",
+    "llama-index-embeddings-huggingface",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 100
