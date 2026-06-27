@@ -4,18 +4,23 @@ version = "0.1.0"
 description = "Hybrid search experiment for legal docs"
 requires-python = ">=3.12"
 # Local-first hybrid search: vector (HuggingFace embeddings) + BM25 keyword, fused.
-# Starting point — adjust as the experiment evolves.
+# Text extracted with PyMuPDF (fast, lightweight).
 dependencies = [
     "llama-index-core",
     "llama-index-retrievers-bm25",
     "llama-index-embeddings-huggingface",
+    "pymupdf",
 ]
 
 [dependency-groups]
 dev = [
     "ipykernel",
+    "pytest",
     "ruff",
 ]
 
 [tool.ruff]
 line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
